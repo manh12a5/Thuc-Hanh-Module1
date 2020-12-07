@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function isFibonacci(x, fib) {
+        x = parseFloat(prompt("Nhap x de so sanh voi day Fibonacci: "));
+        let a = 0;
+        let b = 1;
+        let count = 0;
+        for (let i = 0; i < x; i++) {
+            fib = a + b;
+            a = b;
+            b = fib;
+            if (x === fib) {
+                count++;
+            }
+        }
+        if (count === 0) {
+            alert("False");
+        } else {
+            alert("True");
+        }
+    }
+
+    isFibonacci();
+</script>
+</body>
+</html>
